@@ -19,7 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+
   m_Title: Console
+
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -271,6 +273,7 @@ MonoBehaviour:
     y: 0
     width: 1038
     height: 685
+
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -326,7 +329,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +339,18 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Admin\Documents\GitHub\Collect\Collectify
+  m_LastProjectPath: C:\Users\Artem\Desktop\Collectify\Collectify
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+
     scrollPos: {x: 0, y: 14}
     m_SelectedIDs: bab60000
     m_LastClickedID: 46778
     m_ExpandedIDs: 000000000cb600000eb6000074b6000000ca9a3bffffff7f
+
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +379,9 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+
     m_ExpandedIDs: 000000000cb600000eb60000
+
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -400,9 +407,11 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+
     m_SelectedInstanceIDs: ee67ffff
     m_LastClickedInstanceID: -38930
     m_HadKeyboardFocusLastEvent: 1
+
     m_ExpandedInstanceIDs: c6230000f4e60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -520,6 +529,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+
       m_SelectedIDs: ee67ffff
       m_LastClickedID: -38930
       m_ExpandedIDs: ee67ffff126fffff226fffff2a6fffff306fffff72b5ffff7ab5ffff82b5ffff88b5ffff98baffffa0baffffa8baffffb0baffffb6baffff66c4ffff8ec6ffff96c6ffff9ec6ffffa4c6ffff48ddffff50ddffff56ddffff92e9ffff9ae9ffffa2e9ffffa8e9ffff0afbffff0cfbffff50b300006eb300007cb30000
@@ -1112,9 +1122,11 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
+
     m_Target: {x: 1213.9844, y: 1344.3196, z: -23.747972}
     speed: 2
     m_Value: {x: 1213.9844, y: 1344.3196, z: -23.747972}
+
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1164,9 +1176,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+
     m_Target: 1386.9214
     speed: 2
     m_Value: 1386.9214
+
   m_Ortho:
     m_Target: 1
     speed: 2
