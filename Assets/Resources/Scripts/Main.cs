@@ -13,6 +13,7 @@ public class Main : MonoBehaviour
     public GameObject Button_back;
     public GameObject Footer;
     public GameObject Button_delete;
+    public string name_collection;
     //public GameObject Button_new_container;
     //public Button Button_new;
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
@@ -22,10 +23,12 @@ public class Main : MonoBehaviour
 
 
     public List<Collection> CollectionsList;
+    public List<Item> ItemList;
     void Awake()
     {
         main = this;
         CollectionsList=new List<Collection>();
+        ItemList = new List<Item>();
         //firebaseManager = new FirebaseManager();
 
     }
@@ -41,6 +44,11 @@ public class Main : MonoBehaviour
     public void OpenAllCollection()
     {
         openPrefab("AllCollection", true);
+    }
+    public void OpenAllItems(string name)
+    {
+        openPrefab("AllItems", true);
+        name_collection = name;
     }
 
     //public void OpenEntrance()
