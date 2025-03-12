@@ -15,7 +15,7 @@ public class CollectionEvent : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        ClearContainer();
+        //ClearContainer();
         Main.main.OpenAllItems(Collection.collection_name);
     }
 

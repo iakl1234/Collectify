@@ -9,7 +9,7 @@ public class AllItems: Page
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        buttonBackActive = false;
+        buttonBackActive = true;
         labelActive = true;
         labelText = Main.main.name_collection;
         footerActive = true;

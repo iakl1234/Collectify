@@ -47,8 +47,9 @@ public class Main : MonoBehaviour
     }
     public void OpenAllItems(string name)
     {
-        openPrefab("AllItems", true);
         name_collection = name;
+        openPrefab("AllItems",false);
+        
     }
 
     //public void OpenEntrance()
@@ -86,11 +87,6 @@ public class Main : MonoBehaviour
     {
         Label.text = name;
     }
-    public void OpenPoster()
-    {
-        openPrefab("Poster",true);
-    }
-
     public void Back()
     {
         deleteLastContainers();
