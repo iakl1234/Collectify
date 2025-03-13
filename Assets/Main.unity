@@ -751,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: -38.058}
+  m_AnchoredPosition: {x: -0.00012207031, y: -38.058105}
   m_SizeDelta: {x: 0, y: -540.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420343019 stripped
@@ -968,6 +968,8 @@ MonoBehaviour:
   Button_back: {fileID: 1076299563}
   Footer: {fileID: 499391459}
   Button_delete: {fileID: 0}
+  name_collection: 
+  firestoreManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

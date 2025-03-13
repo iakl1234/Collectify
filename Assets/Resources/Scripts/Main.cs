@@ -18,7 +18,7 @@ public class Main : MonoBehaviour
     //public Button Button_new;
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
     //public User user=new User();
-    //public FirebaseManager firebaseManager;
+    public FirestoreManager firestoreManager;
 
 
 
@@ -29,7 +29,7 @@ public class Main : MonoBehaviour
         main = this;
         CollectionsList=new List<Collection>();
         ItemList = new List<Item>();
-        //firebaseManager = new FirebaseManager();
+        firestoreManager = new FirestoreManager();
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

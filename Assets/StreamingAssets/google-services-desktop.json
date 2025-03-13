@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "594199685069",
+    "project_id": "collectorsapp-9330a",
+    "storage_bucket": "collectorsapp-9330a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594199685069:android:0ebc3b92eb0a90306cc684",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.com.unity.template.mobile2D"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyw6EJvRhx1w1jmM2KmMXiPoDfbIbIj1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
