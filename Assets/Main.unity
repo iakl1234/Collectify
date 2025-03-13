@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 1902380203}
   - component: {fileID: 1902380202}
   - component: {fileID: 1902380206}
+  - component: {fileID: 1902380207}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -970,6 +971,18 @@ MonoBehaviour:
   Button_delete: {fileID: 0}
   name_collection: 
   firestoreManager: {fileID: 0}
+--- !u!114 &1902380207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902380201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107041f1fc9d0374ebd1d68a1014991d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
