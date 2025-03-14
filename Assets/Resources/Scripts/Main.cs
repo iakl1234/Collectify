@@ -20,6 +20,7 @@ public class Main : MonoBehaviour
     //public User user=new User();
     public FirestoreManager firestoreManager;
 
+    public string UserName = "Artem";
 
 
     public List<Collection> CollectionsList;

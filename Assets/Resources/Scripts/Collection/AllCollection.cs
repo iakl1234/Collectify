@@ -6,6 +6,7 @@ public class AllCollection : Page
 {
     public GameObject CollectionContainer;
     public GameObject Scroller;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -18,8 +19,14 @@ public class AllCollection : Page
     {
         Main.main.OpenCreateColletion();
     }
-
     private void OnEnable()
+    {
+
+        AsyncOnEnable();
+
+    }
+
+    private async void AsyncOnEnable()
     {
         Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive);
         // Проходим по всем дочерним объектам и удаляем их
@@ -27,9 +34,8 @@ public class AllCollection : Page
         {
             Destroy(child.gameObject);
         }
-        Debug.Log("ffffffffffff");
+        await FirestoreManager.Instance.LoadUserCollections();
         UppdateSize();
-
     }
     public void UppdateSize()
     {

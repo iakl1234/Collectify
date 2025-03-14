@@ -27,7 +27,6 @@ public class AllItems: Page
         {
             Destroy(child.gameObject);
         }
-        Debug.Log("ffffffffffff");
         UppdateSize();
 
     }

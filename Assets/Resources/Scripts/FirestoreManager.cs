@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Extensions;
 using Firebase.Firestore;
+using Google.MiniJSON;
 using UnityEngine;
 
 public class FirestoreManager : MonoBehaviour
@@ -16,19 +19,32 @@ public class FirestoreManager : MonoBehaviour
         Instance = this;
         firestore = FirebaseFirestore.DefaultInstance;
         auth = FirebaseAuth.DefaultInstance;
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-        {
-            Debug.Log("ff");
-            if (task.IsFaulted)
-            {
-                Debug.LogError("Firebase initialization failed: " + task.Exception);
-            }
-            else if (task.IsCompleted)
-            {
-                Debug.Log("its work");
-            }
-        });
     }
+    public async Task LoadUserCollections()
+    {
 
+        try
+        {
+            Main.main.CollectionsList.Clear();
+            // Ссылка на подколлекцию пользователя
+            DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
+            CollectionReference collectionsRef = userRef.Collection("Collections");
+
+            // Получение всех документов
+            QuerySnapshot snapshot = await collectionsRef.GetSnapshotAsync();
+
+            // Обработка результатов
+            List<Dictionary<string, object>> collections = new List<Dictionary<string, object>>();
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                Collection newCollection = new Collection(document.GetValue<string>("Name"));
+                Main.main.CollectionsList.Add(newCollection);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Ошибка: {e.Message}");
+        }
+    }
 
 }
