@@ -20,6 +20,32 @@ public class FirestoreManager : MonoBehaviour
         firestore = FirebaseFirestore.DefaultInstance;
         auth = FirebaseAuth.DefaultInstance;
     }
+
+    public async Task AddNewCollection(Collection collection)
+    {
+        try
+        {
+            // Ссылка на подколлекцию пользователя
+            DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
+            CollectionReference collectionsRef = userRef.Collection("Collections");
+
+            // Создаем новый документ с автоматически сгенерированным ID
+            Dictionary<string, object> newCollection = new Dictionary<string, object>
+            {
+                { "Name", collection.collection_name },
+                { "CreatedAt", FieldValue.ServerTimestamp } // Добавляем метку времени
+            };
+
+            // Добавляем новый документ в коллекцию
+            DocumentReference addedDocRef = await collectionsRef.AddAsync(newCollection);
+
+            Debug.Log($"Новая коллекция добавлена с ID: {addedDocRef.Id}");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Ошибка при добавлении коллекции: {e.Message}");
+        }
+    }
     public async Task LoadUserCollections()
     {
 

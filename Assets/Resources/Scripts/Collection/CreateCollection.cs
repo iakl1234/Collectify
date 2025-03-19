@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class CreateCollection : Page
         labelText = "Мои коллекции";
         footerActive=true;
     }
-    public void CreateCollectionButton()
+    public async Task CreateCollectionButton()
     {
         Debug.Log("Введены правильно");
         if (Name.text != "")
@@ -22,7 +23,8 @@ public class CreateCollection : Page
             Debug.Log("Введены правильно");
             //Notification.enabled = false;
             Collection newCollection = new Collection(Name.text);
-            Main.main.CollectionsList.Add(newCollection);
+            await FirestoreManager.Instance.AddNewCollection(newCollection);
+            //Main.main.CollectionsList.Add(newCollection);
             Main.main.Back();
         }
         else
