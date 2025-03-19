@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Firebase;
@@ -63,13 +64,43 @@ public class FirestoreManager : MonoBehaviour
             List<Dictionary<string, object>> collections = new List<Dictionary<string, object>>();
             foreach (DocumentSnapshot document in snapshot.Documents)
             {
-                Collection newCollection = new Collection(document.GetValue<string>("Name"));
+                Collection newCollection = new Collection(document.GetValue<string>("Name"),document.Id);
                 Main.main.CollectionsList.Add(newCollection);
             }
         }
         catch (System.Exception e)
         {
             Debug.LogError($"Ошибка: {e.Message}");
+        }
+    }
+
+    public async Task DeleteDocumentAsync(Collection collections)
+    {
+        try
+        {
+            // Получаем ссылку на документ
+            DocumentReference docRef = firestore
+                .Collection("Users")
+                .Document(Main.main.UserName)
+                .Collection("Collections")
+                .Document(collections.id);
+
+            // Проверяем существование документа
+            DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
+
+            if (!snapshot.Exists)
+            {
+                Console.WriteLine("Документ не найден");
+                return;
+            }
+
+            // Удаляем документ
+            await docRef.DeleteAsync();
+            Console.WriteLine($"Документ {collections.collection_name} успешно удален");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка удаления: {ex.Message}");
         }
     }
 

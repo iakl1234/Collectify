@@ -194,6 +194,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319926759}
   m_CullTransparentMesh: 1
+--- !u!1 &485091650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2364147081712607592, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+  m_PrefabInstance: {fileID: 830254767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499391459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1082689856560567021, guid: 93954bbe114fae741af6bd6b1d52dfc4, type: 3}
@@ -476,6 +481,34 @@ PrefabInstance:
       value: Main, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2963864068797038514, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1902380206}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteCollection
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Main, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -968,8 +1001,7 @@ MonoBehaviour:
   Label: {fileID: 1420343019}
   Button_back: {fileID: 1076299563}
   Footer: {fileID: 499391459}
-  Button_delete: {fileID: 0}
-  name_collection: 
+  Button_delete: {fileID: 485091650}
   firestoreManager: {fileID: 0}
   UserName: Artem
 --- !u!114 &1902380207

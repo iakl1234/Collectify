@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 
 public class Main : MonoBehaviour
@@ -13,7 +14,7 @@ public class Main : MonoBehaviour
     public GameObject Button_back;
     public GameObject Footer;
     public GameObject Button_delete;
-    public string name_collection;
+    public Collection collection;
     //public GameObject Button_new_container;
     //public Button Button_new;
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
@@ -46,9 +47,9 @@ public class Main : MonoBehaviour
     {
         openPrefab("AllCollection", true);
     }
-    public void OpenAllItems(string name)
+    public void OpenAllItems(Collection collection)
     {
-        name_collection = name;
+        this.collection = collection;
         openPrefab("AllItems",false);
         
     }
@@ -58,7 +59,16 @@ public class Main : MonoBehaviour
     //    if (user.authorized) openPrefab("Profile", true);  else openPrefab("Entrance", true);
 
     //}
-    public void StartSetting(bool activeBack, bool activeLabel,string labelText="", bool activeFooter=true)
+    public void DeleteCollection()
+    {
+        AsyncDeleteCollection();
+    }
+    public async Task AsyncDeleteCollection()
+    {
+        await FirestoreManager.Instance.DeleteDocumentAsync(collection);
+        Back();
+    }
+    public void StartSetting(bool activeBack, bool activeLabel,string labelText="", bool activeFooter=true, bool activeDelete=false)
     {
         Button_back.SetActive(activeBack);
         Label.enabled=activeLabel;
@@ -67,6 +77,7 @@ public class Main : MonoBehaviour
             Label.text = labelText;
         }
         Footer.SetActive(activeFooter);
+        Button_delete.SetActive(activeDelete);
     }
 
     //public void OpenIventInfo(Event newEvent)

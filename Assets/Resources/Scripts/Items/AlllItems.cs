@@ -11,8 +11,9 @@ public class AllItems: Page
     {
         buttonBackActive = true;
         labelActive = true;
-        labelText = Main.main.name_collection;
+        labelText = Main.main.collection.collection_name;
         footerActive = true;
+        buttonDeleteActive = true;
     }
     public void OpenCreateCollection()
     {
@@ -21,7 +22,7 @@ public class AllItems: Page
 
     private void OnEnable()
     {
-        Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive);
+        Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive, buttonDeleteActive);
         // Проходим по всем дочерним объектам и удаляем их
         foreach (Transform child in CollectionContainer.transform)
         {
