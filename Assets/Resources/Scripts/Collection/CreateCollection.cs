@@ -15,7 +15,11 @@ public class CreateCollection : Page
         labelText = "Мои коллекции";
         footerActive=true;
     }
-    public async Task CreateCollectionButton()
+    public void CreateCollectionButton()
+    {
+        AsyncCreateCollectionButton();
+    }
+    public async Task AsyncCreateCollectionButton()
     {
         Debug.Log("Введены правильно");
         if (Name.text != "")
