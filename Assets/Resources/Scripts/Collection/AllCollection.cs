@@ -28,7 +28,7 @@ public class AllCollection : Page
 
     private async void AsyncOnEnable()
     {
-        Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive);
+        Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive, buttonDeleteActive);
         // Проходим по всем дочерним объектам и удаляем их
         foreach (Transform child in CollectionContainer.transform)
         {

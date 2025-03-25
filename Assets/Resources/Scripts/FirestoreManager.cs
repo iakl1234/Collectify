@@ -52,7 +52,7 @@ public class FirestoreManager : MonoBehaviour
 
         try
         {
-            Main.main.CollectionsList.Clear();
+            Main.main.ItemList.Clear();
             // Ссылка на подколлекцию пользователя
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
             CollectionReference collectionsRef = userRef.Collection("Collections");
@@ -66,6 +66,32 @@ public class FirestoreManager : MonoBehaviour
             {
                 Collection newCollection = new Collection(document.GetValue<string>("Name"),document.Id);
                 Main.main.CollectionsList.Add(newCollection);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Ошибка: {e.Message}");
+        }
+    }
+    public async Task LoadUserItems()
+    {
+
+        try
+        {
+            Main.main.CollectionsList.Clear();
+            // Ссылка на подколлекцию пользователя
+            DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName).Collection("Collections").Document(Main.main.collection.id);
+            CollectionReference itemsRef = userRef.Collection("Items");
+
+            // Получение всех документов
+            QuerySnapshot snapshot = await itemsRef.GetSnapshotAsync();
+
+            // Обработка результатов
+            List<Dictionary<string, object>> items = new List<Dictionary<string, object>>();
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                Item newItem = new Item(document.GetValue<string>("Name"),document.Id);
+                Main.main.ItemList.Add(newItem);
             }
         }
         catch (System.Exception e)

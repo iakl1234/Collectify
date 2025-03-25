@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4786d6e6d15e8b440b956a2e60f3b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectionContainer: {fileID: 7213700337585754817}
+  ItemContainer: {fileID: 7213700337585754817}
   Scroller: {fileID: 8449278420826026678}
 --- !u!1 &1439449636708842768
 GameObject:

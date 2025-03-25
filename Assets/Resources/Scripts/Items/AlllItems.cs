@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class AllItems: Page
 {
-    public GameObject CollectionContainer;
+    public GameObject ItemContainer;
     public GameObject Scroller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -20,32 +20,41 @@ public class AllItems: Page
         Main.main.OpenCreateColletion();
     }
 
+
     private void OnEnable()
     {
+
+        AsyncOnEnable();
+
+    }
+
+    private async void AsyncOnEnable()
+    {
+
         Main.main.StartSetting(buttonBackActive, labelActive, labelText, footerActive, buttonDeleteActive);
         // Проходим по всем дочерним объектам и удаляем их
-        foreach (Transform child in CollectionContainer.transform)
+        foreach (Transform child in ItemContainer.transform)
         {
             Destroy(child.gameObject);
         }
+        await FirestoreManager.Instance.LoadUserItems();
         UppdateSize();
-
     }
     public void UppdateSize()
     {
-        foreach (var collection in Main.main.ItemList)
+        foreach (var item in Main.main.ItemList)
         {
-            GameObject Prefab = Instantiate(Resources.Load<GameObject>("Prefabs/Item"), CollectionContainer.transform.position, Quaternion.identity);
-            Prefab.GetComponent<ItemEvent>().Init(collection);
-            Prefab.transform.SetParent(CollectionContainer.transform, false);
+            GameObject Prefab = Instantiate(Resources.Load<GameObject>("Prefabs/Item"), ItemContainer.transform.position, Quaternion.identity);
+            Prefab.GetComponent<ItemEvent>().Init(item);
+            Prefab.transform.SetParent(ItemContainer.transform, false);
         }
 
 
-        int rows = Mathf.CeilToInt((Main.main.CollectionsList.Count+1) / 2);
+        int rows = Mathf.CeilToInt((Main.main.ItemList.Count+1) / 2);
 
         float height = rows * 500;
 
-        CollectionContainer.GetComponent<RectTransform>().sizeDelta= new Vector2(CollectionContainer.GetComponent<RectTransform>().sizeDelta.x, height);
+        ItemContainer.GetComponent<RectTransform>().sizeDelta= new Vector2(ItemContainer.GetComponent<RectTransform>().sizeDelta.x, height);
         //GameObject empty = new GameObject("Empty");
         //empty.AddComponent<RectTransform>();
         //empty.transform.SetParent(CollectionContainer.transform, false);
