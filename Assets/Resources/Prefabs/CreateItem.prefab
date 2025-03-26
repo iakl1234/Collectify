@@ -2693,6 +2693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: {fileID: 2967571091884270771}
+  Year: {fileID: 4028011078255975575}
+  Production: {fileID: 5783014784140928446}
+  Description: {fileID: 3628829478228858358}
 --- !u!1 &9164776758720790386
 GameObject:
   m_ObjectHideFlags: 0

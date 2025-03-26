@@ -66,6 +66,9 @@ public class FirestoreManager : MonoBehaviour
             Dictionary<string, object> newItem = new Dictionary<string, object>
         {
             { "Name", item.item_name },
+            { "Year", item.item_year },
+            { "Production", item.item_production },
+            { "Description", item.item_description },
             { "CreatedAt", FieldValue.ServerTimestamp },
             // Добавьте другие поля предмета по необходимости
         };
