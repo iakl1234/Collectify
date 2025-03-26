@@ -22,7 +22,8 @@ public class AllItems: Page
 
     private void OnEnable()
     {
-
+        Main.main.Button_delete.GetComponent<Button>().onClick.RemoveAllListeners();
+        Main.main.Button_delete.GetComponent<Button>().onClick.AddListener(Main.main.DeleteCollection);
         AsyncOnEnable();
 
     }

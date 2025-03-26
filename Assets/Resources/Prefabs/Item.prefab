@@ -420,9 +420,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CollectionEvent, Assembly-CSharp
-        m_MethodName: OnButtonClicked
+      - m_Target: {fileID: 2826958006784201441}
+        m_TargetAssemblyTypeName: ItemEvent, Assembly-CSharp
+        m_MethodName: OpenItemInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

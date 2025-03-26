@@ -12,4 +12,8 @@ public class ItemEvent : MonoBehaviour
         this.Name.text = newCollection.item_name;
         Item = newCollection;
     }
+    public void OpenItemInfo()
+    {
+        Main.main.OpenItemInfo(Item);
+    }
 }

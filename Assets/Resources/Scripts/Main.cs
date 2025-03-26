@@ -13,8 +13,10 @@ public class Main : MonoBehaviour
     public TextMeshProUGUI Label;
     public GameObject Button_back;
     public GameObject Footer;
-    public GameObject Button_delete;
+    public GameObject Button_delete_Image;
+    public Button Button_delete;
     public Collection collection;
+    public Item item;
     //public GameObject Button_new_container;
     //public Button Button_new;
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
@@ -58,6 +60,12 @@ public class Main : MonoBehaviour
         
     }
 
+    public void OpenItemInfo(Item item)
+    {
+        this.item = item;
+        openPrefab("ItemInfo", false);
+    }
+
     //public void OpenEntrance()
     //{
     //    if (user.authorized) openPrefab("Profile", true);  else openPrefab("Entrance", true);
@@ -72,6 +80,15 @@ public class Main : MonoBehaviour
         await FirestoreManager.Instance.DeleteDocumentAsync(collection);
         Back();
     }
+    public void DeleteItem()
+    {
+        AsyncDeleteItem();
+    }
+    public async Task AsyncDeleteItem()
+    {
+        await FirestoreManager.Instance.DeleteItemAsync(item);
+        Back();
+    }
     public void StartSetting(bool activeBack, bool activeLabel,string labelText="", bool activeFooter=true, bool activeDelete=false)
     {
         Button_back.SetActive(activeBack);
@@ -81,7 +98,7 @@ public class Main : MonoBehaviour
             Label.text = labelText;
         }
         Footer.SetActive(activeFooter);
-        Button_delete.SetActive(activeDelete);
+        Button_delete_Image.SetActive(activeDelete);
     }
 
     //public void OpenIventInfo(Event newEvent)

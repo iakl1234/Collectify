@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1001,7 +1001,8 @@ MonoBehaviour:
   Label: {fileID: 1420343019}
   Button_back: {fileID: 1076299563}
   Footer: {fileID: 499391459}
-  Button_delete: {fileID: 485091650}
+  Button_delete_Image: {fileID: 485091650}
+  Button_delete: {fileID: 2129038293}
   firestoreManager: {fileID: 0}
   UserName: Artem
 --- !u!114 &1902380207
@@ -1014,6 +1015,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107041f1fc9d0374ebd1d68a1014991d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2129038293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3563788033210814052, guid: 6c833e9a5424ce54291de4dfab771a53, type: 3}
+  m_PrefabInstance: {fileID: 830254767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

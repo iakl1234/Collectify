@@ -15,24 +15,6 @@ public class CollectionEvent : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        //ClearContainer();
         Main.main.OpenAllItems(Collection);
-    }
-
-    private void ClearContainer()
-    {
-        GameObject mainContainer = Main.main.Main_container;
-
-        Transform mainTransform = mainContainer.transform;
-
-        // Проходим по всем дочерним объектам Main
-        foreach (Transform child in mainTransform)
-        {
-            // Если имя дочернего объекта содержит "Collection", удаляем его
-            if (child.name.Contains("Collection(Clone)"))
-            {
-                Destroy(child.gameObject);
-            }
-        }
     }
 }
