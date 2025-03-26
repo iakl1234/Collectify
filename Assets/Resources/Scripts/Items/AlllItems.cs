@@ -15,11 +15,10 @@ public class AllItems: Page
         footerActive = true;
         buttonDeleteActive = true;
     }
-    public void OpenCreateCollection()
+    public void OpenCreateItem()
     {
-        Main.main.OpenCreateColletion();
+        Main.main.OpenCreateItem();
     }
-
 
     private void OnEnable()
     {
