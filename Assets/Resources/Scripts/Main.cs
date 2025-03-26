@@ -43,6 +43,10 @@ public class Main : MonoBehaviour
     {
         openPrefab("CreateCollection", false);
     }
+    public void OpenCreateItem()
+    {
+        openPrefab("CreateItem", false);
+    }
     public void OpenAllCollection()
     {
         openPrefab("AllCollection", true);

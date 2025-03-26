@@ -426,9 +426,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AllCollection, Assembly-CSharp
-        m_MethodName: OpenCreateCollection
+      - m_Target: {fileID: 6062300212568057248}
+        m_TargetAssemblyTypeName: AllItems, Assembly-CSharp
+        m_MethodName: OpenCreateItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

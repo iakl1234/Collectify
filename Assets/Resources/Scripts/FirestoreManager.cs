@@ -47,6 +47,40 @@ public class FirestoreManager : MonoBehaviour
             Debug.LogError($"Ошибка при добавлении коллекции: {e.Message}");
         }
     }
+
+    public async Task AddNewItem(Item item, string collectionId)
+    {
+        try
+        {
+            // Ссылка на конкретную коллекцию пользователя
+            DocumentReference collectionRef = firestore
+                .Collection("Users")
+                .Document(Main.main.UserName)
+                .Collection("Collections")
+                .Document(collectionId);
+
+            // Ссылка на подколлекцию Items внутри коллекции
+            CollectionReference itemsRef = collectionRef.Collection("Items");
+
+            // Создаем новый документ предмета
+            Dictionary<string, object> newItem = new Dictionary<string, object>
+        {
+            { "Name", item.item_name },
+            { "CreatedAt", FieldValue.ServerTimestamp },
+            // Добавьте другие поля предмета по необходимости
+        };
+
+            // Добавляем новый документ в подколлекцию Items
+            DocumentReference addedItemRef = await itemsRef.AddAsync(newItem);
+
+            Debug.Log($"Новый предмет добавлен с ID: {addedItemRef.Id} в коллекцию {collectionId}");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Ошибка при добавлении предмета: {e.Message}");
+        }
+    }
+
     public async Task LoadUserCollections()
     {
 
