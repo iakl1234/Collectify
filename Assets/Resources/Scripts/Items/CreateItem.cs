@@ -6,6 +6,9 @@ using UnityEngine;
 public class CreateItem : Page
 {
     public TMP_InputField Name;
+    public TMP_InputField Year;
+    public TMP_InputField Production;
+    public TMP_InputField Description;
     //public TextMeshProUGUI Notification;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -26,7 +29,7 @@ public class CreateItem : Page
         {
             Debug.Log("¬ведены правильно");
             //Notification.enabled = false;
-            Item newItem = new Item(Name.text);
+            Item newItem = new Item(Name.text, Year.text, Production.text, Description.text);
             await FirestoreManager.Instance.AddNewItem(newItem, Main.main.collection.id);
             //Main.main.CollectionsList.Add(newCollection);
             Main.main.Back();
