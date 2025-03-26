@@ -89,7 +89,7 @@ public class FirestoreManager : MonoBehaviour
 
         try
         {
-            Main.main.ItemList.Clear();
+            Main.main.CollectionsList.Clear();
             // —сылка на подколлекцию пользовател€
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
             CollectionReference collectionsRef = userRef.Collection("Collections");
@@ -115,7 +115,7 @@ public class FirestoreManager : MonoBehaviour
 
         try
         {
-            Main.main.CollectionsList.Clear();
+            Main.main.ItemList.Clear();
             // —сылка на подколлекцию пользовател€
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName).Collection("Collections").Document(Main.main.collection.id);
             CollectionReference itemsRef = userRef.Collection("Items");
