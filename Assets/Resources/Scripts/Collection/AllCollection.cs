@@ -52,9 +52,6 @@ public class AllCollection : Page
         float height = rows * 500;
 
         CollectionContainer.GetComponent<RectTransform>().sizeDelta= new Vector2(CollectionContainer.GetComponent<RectTransform>().sizeDelta.x, height);
-        //GameObject empty = new GameObject("Empty");
-        //empty.AddComponent<RectTransform>();
-        //empty.transform.SetParent(CollectionContainer.transform, false);
 
     }
 }

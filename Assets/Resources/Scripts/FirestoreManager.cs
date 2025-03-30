@@ -167,4 +167,35 @@ public class FirestoreManager : MonoBehaviour
         }
     }
 
+
+    public async Task DeleteItemAsync(Item item)
+    {
+        try
+        {
+            // Получаем ссылку на документ
+            DocumentReference docRef = firestore
+                .Collection("Users")
+                .Document(Main.main.UserName)
+                .Collection("Collections")
+                .Document(Main.main.collection.id).Collection("Items").Document(item.id);
+
+            // Проверяем существование документа
+            DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
+
+            if (!snapshot.Exists)
+            {
+                Console.WriteLine("Документ не найден");
+                return;
+            }
+
+            // Удаляем документ
+            await docRef.DeleteAsync();
+            Console.WriteLine($"Документ {item.item_name} успешно удален");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка удаления: {ex.Message}");
+        }
+    }
+
 }
