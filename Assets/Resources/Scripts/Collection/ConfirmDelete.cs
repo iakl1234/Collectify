@@ -9,6 +9,14 @@ public class ConfirmDelete : Page
     public Button cancelButton;
     private System.Action onConfirm;
 
+    private void Awake()
+    {
+        buttonBackActive = false;
+        labelActive = true;
+        labelText = "Мои коллекции";
+        footerActive = true;
+    }
+
     void Start()
     {
         confirmButton.onClick.AddListener(OnConfirm);
