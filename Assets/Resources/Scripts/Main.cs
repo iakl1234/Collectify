@@ -66,15 +66,28 @@ public class Main : MonoBehaviour
         openPrefab("ItemInfo", false);
     }
 
+    public void DeleteWindow()
+    {
+        openPrefab("ConfirmDelete", true);
+    }
+
     //public void OpenEntrance()
     //{
     //    if (user.authorized) openPrefab("Profile", true);  else openPrefab("Entrance", true);
 
     //}
+    // Main.cs
     public void DeleteCollection()
+    {
+        openPrefab("ConfirmDelete", false);
+        
+    }
+
+    public void DeleteCollectionConfirm()
     {
         AsyncDeleteCollection();
     }
+
     public async Task AsyncDeleteCollection()
     {
         await FirestoreManager.Instance.DeleteDocumentAsync(collection);
@@ -89,6 +102,9 @@ public class Main : MonoBehaviour
         await FirestoreManager.Instance.DeleteItemAsync(item);
         Back();
     }
+
+
+
     public void StartSetting(bool activeBack, bool activeLabel,string labelText="", bool activeFooter=true, bool activeDelete=false)
     {
         Button_back.SetActive(activeBack);

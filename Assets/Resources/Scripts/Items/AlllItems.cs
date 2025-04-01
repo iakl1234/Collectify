@@ -60,4 +60,9 @@ public class AllItems: Page
         //empty.transform.SetParent(CollectionContainer.transform, false);
 
     }
+
+    public void DeleteCollectionWithConfirm()
+    {
+        Main.main.DeleteWindow();
+    }
 }
