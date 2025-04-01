@@ -30,4 +30,10 @@ public class Page : MonoBehaviour
     internal virtual void onClick()
     {
     }
+
+    protected void OpenModal(GameObject modalPrefab)
+    {
+        modalPrefab.transform.SetParent(Main.main.Main_container.transform, false);
+        modalPrefab.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+    }
 }
