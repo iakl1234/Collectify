@@ -26,25 +26,44 @@ public class FirestoreManager : MonoBehaviour
     {
         try
         {
-            // Ссылка на подколлекцию пользователя
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
             CollectionReference collectionsRef = userRef.Collection("Collections");
 
-            // Создаем новый документ с автоматически сгенерированным ID
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ID
             Dictionary<string, object> newCollection = new Dictionary<string, object>
             {
                 { "Name", collection.collection_name },
-                { "CreatedAt", FieldValue.ServerTimestamp } // Добавляем метку времени
+                { "CreatedAt", FieldValue.ServerTimestamp } // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             };
 
-            // Добавляем новый документ в коллекцию
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference addedDocRef = await collectionsRef.AddAsync(newCollection);
 
-            Debug.Log($"Новая коллекция добавлена с ID: {addedDocRef.Id}");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ID: {addedDocRef.Id}");
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Ошибка при добавлении коллекции: {e.Message}");
+            Debug.LogError($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {e.Message}");
+        }
+    }
+    public async Task UpdateCollection(Collection collection)
+    {
+        try
+        {
+            DocumentReference collectionRef = firestore.Collection("Users").Document(Main.main.UserName).Collection("Collections").Document(collection.id);
+            Dictionary<string, object> updatedCollection = new Dictionary<string, object>
+         {
+            { "Name", collection.collection_name },  // РћР±РЅРѕРІР»СЏРµРј РёРјСЏ РєРѕР»Р»РµРєС†РёРё
+            { "UpdatedAt", FieldValue.ServerTimestamp }  // Р”РѕР±Р°РІР»СЏРµРј РѕС‚РјРµС‚РєСѓ РІСЂРµРјРµРЅРё РѕР±РЅРѕРІР»РµРЅРёСЏ
+         };
+         await collectionRef.UpdateAsync(updatedCollection);
+
+         Debug.Log($"РљРѕР»Р»РµРєС†РёСЏ {collection.collection_name} РѕР±РЅРѕРІР»РµРЅР°.");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"РћС€РёР±РєР° РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РєРѕР»Р»РµРєС†РёРё: {e.Message}"); 
         }
     }
 
@@ -52,17 +71,17 @@ public class FirestoreManager : MonoBehaviour
     {
         try
         {
-            // Ссылка на конкретную коллекцию пользователя
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference collectionRef = firestore
                 .Collection("Users")
                 .Document(Main.main.UserName)
                 .Collection("Collections")
                 .Document(collectionId);
 
-            // Ссылка на подколлекцию Items внутри коллекции
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Items пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             CollectionReference itemsRef = collectionRef.Collection("Items");
 
-            // Создаем новый документ предмета
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             Dictionary<string, object> newItem = new Dictionary<string, object>
         {
             { "Name", item.item_name },
@@ -70,17 +89,17 @@ public class FirestoreManager : MonoBehaviour
             { "Production", item.item_production },
             { "Description", item.item_description },
             { "CreatedAt", FieldValue.ServerTimestamp },
-            // Добавьте другие поля предмета по необходимости
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         };
 
-            // Добавляем новый документ в подколлекцию Items
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Items
             DocumentReference addedItemRef = await itemsRef.AddAsync(newItem);
 
-            Debug.Log($"Новый предмет добавлен с ID: {addedItemRef.Id} в коллекцию {collectionId}");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ID: {addedItemRef.Id} пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {collectionId}");
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Ошибка при добавлении предмета: {e.Message}");
+            Debug.LogError($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {e.Message}");
         }
     }
 
@@ -90,14 +109,14 @@ public class FirestoreManager : MonoBehaviour
         try
         {
             Main.main.CollectionsList.Clear();
-            // Ссылка на подколлекцию пользователя
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName);
             CollectionReference collectionsRef = userRef.Collection("Collections");
 
-            // Получение всех документов
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             QuerySnapshot snapshot = await collectionsRef.GetSnapshotAsync();
 
-            // Обработка результатов
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             List<Dictionary<string, object>> collections = new List<Dictionary<string, object>>();
             foreach (DocumentSnapshot document in snapshot.Documents)
             {
@@ -107,7 +126,7 @@ public class FirestoreManager : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Ошибка: {e.Message}");
+            Debug.LogError($"пїЅпїЅпїЅпїЅпїЅпїЅ: {e.Message}");
         }
     }
     public async Task LoadUserItems()
@@ -116,14 +135,14 @@ public class FirestoreManager : MonoBehaviour
         try
         {
             Main.main.ItemList.Clear();
-            // Ссылка на подколлекцию пользователя
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference userRef = firestore.Collection("Users").Document(Main.main.UserName).Collection("Collections").Document(Main.main.collection.id);
             CollectionReference itemsRef = userRef.Collection("Items");
 
-            // Получение всех документов
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             QuerySnapshot snapshot = await itemsRef.GetSnapshotAsync();
 
-            // Обработка результатов
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             List<Dictionary<string, object>> items = new List<Dictionary<string, object>>();
             foreach (DocumentSnapshot document in snapshot.Documents)
             {
@@ -133,7 +152,7 @@ public class FirestoreManager : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Ошибка: {e.Message}");
+            Debug.LogError($"пїЅпїЅпїЅпїЅпїЅпїЅ: {e.Message}");
         }
     }
 
@@ -141,29 +160,29 @@ public class FirestoreManager : MonoBehaviour
     {
         try
         {
-            // Получаем ссылку на документ
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference docRef = firestore
                 .Collection("Users")
                 .Document(Main.main.UserName)
                 .Collection("Collections")
                 .Document(collections.id);
 
-            // Проверяем существование документа
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
 
             if (!snapshot.Exists)
             {
-                Console.WriteLine("Документ не найден");
+                Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
                 return;
             }
 
-            // Удаляем документ
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             await docRef.DeleteAsync();
-            Console.WriteLine($"Документ {collections.collection_name} успешно удален");
+            Console.WriteLine($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {collections.collection_name} пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Ошибка удаления: {ex.Message}");
+            Console.WriteLine($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {ex.Message}");
         }
     }
 
@@ -172,29 +191,29 @@ public class FirestoreManager : MonoBehaviour
     {
         try
         {
-            // Получаем ссылку на документ
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentReference docRef = firestore
                 .Collection("Users")
                 .Document(Main.main.UserName)
                 .Collection("Collections")
                 .Document(Main.main.collection.id).Collection("Items").Document(item.id);
 
-            // Проверяем существование документа
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
 
             if (!snapshot.Exists)
             {
-                Console.WriteLine("Документ не найден");
+                Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
                 return;
             }
 
-            // Удаляем документ
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             await docRef.DeleteAsync();
-            Console.WriteLine($"Документ {item.item_name} успешно удален");
+            Console.WriteLine($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {item.item_name} пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Ошибка удаления: {ex.Message}");
+            Console.WriteLine($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {ex.Message}");
         }
     }
 
@@ -218,7 +237,7 @@ public class FirestoreManager : MonoBehaviour
                 return;
             }
 
-            // Пользователь успешно зарегистрирован
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             FirebaseUser newUser = task.Result.User;
             Debug.LogFormat("Firebase user created successfully: {0} ({1})", newUser.DisplayName, newUser.UserId);
             Main.main.UserName = newUser.UserId;
@@ -244,7 +263,7 @@ public class FirestoreManager : MonoBehaviour
                 return;
             }
 
-            // Пользователь успешно вошел в систему
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             FirebaseUser user = task.Result.User;
             Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
             Main.main.UserName = user.UserId;
