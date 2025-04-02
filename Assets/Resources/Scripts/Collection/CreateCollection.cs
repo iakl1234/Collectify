@@ -12,7 +12,7 @@ public class CreateCollection : Page
     {
         buttonBackActive = true;
         labelActive = true;
-        labelText = "Мои коллекции";
+        labelText = "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
         footerActive=true;
     }
     public void CreateCollectionButton()
@@ -21,10 +21,10 @@ public class CreateCollection : Page
     }
     public async Task AsyncCreateCollectionButton()
     {
-        Debug.Log("Введены правильно");
+        Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         if (Name.text != "")
         {
-            Debug.Log("Введены правильно");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             //Notification.enabled = false;
             Collection newCollection = new Collection(Name.text);
             await FirestoreManager.Instance.AddNewCollection(newCollection);
@@ -33,7 +33,7 @@ public class CreateCollection : Page
         }
         else
         {
-            Debug.Log("Введены неправильно");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             //Notification.enabled = true;
         }
 

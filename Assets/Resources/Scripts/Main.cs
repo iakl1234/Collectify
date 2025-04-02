@@ -50,6 +50,12 @@ public class Main : MonoBehaviour
     {
         openPrefab("CreateCollection", false);
     }
+    public void OpenEditCollection(Collection collection)
+    {
+        this.collection = collection;
+        openPrefab("EditCollection", false);
+    }
+
     public void OpenCreateItem()
     {
         openPrefab("CreateItem", false);
