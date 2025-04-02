@@ -198,4 +198,62 @@ public class FirestoreManager : MonoBehaviour
         }
     }
 
+    public void RegisterUser(string email, string password)
+    {
+
+        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
+            if (task.IsCompleted)
+            {
+                Debug.Log("zzzzzzzzzzzzz");
+
+            }
+            if (task.IsCanceled)
+            {
+                Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            // ѕользователь успешно зарегистрирован
+            FirebaseUser newUser = task.Result.User;
+            Debug.LogFormat("Firebase user created successfully: {0} ({1})", newUser.DisplayName, newUser.UserId);
+            Main.main.UserName = newUser.UserId;
+            Main.main.OpenAllCollection();
+        });
+    }
+    public void SignInUser(string email, string password)
+    {
+        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
+            if (task.IsCanceled)
+            {
+                Debug.Log("SignInWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                try
+                {
+                    RegisterUser(email, password);
+                }
+                catch { Debug.Log("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception); }
+                
+                return;
+            }
+
+            // ѕользователь успешно вошел в систему
+            FirebaseUser user = task.Result.User;
+            Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+            Main.main.UserName = user.UserId;
+            Main.main.OpenAllCollection();
+            
+        });
+    }
+
+
+
+
 }

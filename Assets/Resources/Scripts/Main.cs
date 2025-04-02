@@ -23,7 +23,7 @@ public class Main : MonoBehaviour
     //public User user=new User();
     public FirestoreManager firestoreManager;
 
-    public string UserName = "Artem";
+    public string UserName;
 
 
     public List<Collection> CollectionsList;
@@ -39,7 +39,12 @@ public class Main : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        OpenAllCollection();
+        OpenProfileAutentification();
+        //OpenAllCollection();
+    }
+    public void OpenProfileAutentification()
+    {
+        openPrefab("ProfileAutentification", false);
     }
     public void OpenCreateColletion()
     {
@@ -80,7 +85,6 @@ public class Main : MonoBehaviour
     public void DeleteCollection()
     {
         openPrefab("ConfirmDelete", false);
-        
     }
 
     public void DeleteCollectionConfirm()
