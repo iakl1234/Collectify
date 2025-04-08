@@ -105,8 +105,16 @@ public class Main : MonoBehaviour
     }
     public void DeleteItem()
     {
+        openPrefab("ConfirmDeleteItem", false);
+    }
+
+    // Метод для подтверждения удаления
+    public void DeleteItemConfirm()
+    {
         AsyncDeleteItem();
     }
+
+    // Асинхронное удаление
     public async Task AsyncDeleteItem()
     {
         await FirestoreManager.Instance.DeleteItemAsync(item);

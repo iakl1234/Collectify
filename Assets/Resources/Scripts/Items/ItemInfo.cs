@@ -23,6 +23,8 @@ public class ItemInfo : Page
         labelText = Main.main.item.item_name;
         footerActive = true;
         buttonDeleteActive = true;
+
+
         Main.main.Button_delete.GetComponent<Button>().onClick.RemoveAllListeners();
         Main.main.Button_delete.GetComponent<Button>().onClick.AddListener(Main.main.DeleteItem);
     }
