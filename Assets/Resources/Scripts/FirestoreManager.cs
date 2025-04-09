@@ -53,10 +53,10 @@ public class FirestoreManager : MonoBehaviour
         {
             DocumentReference collectionRef = firestore.Collection("Users").Document(Main.main.UserName).Collection("Collections").Document(collection.id);
             Dictionary<string, object> updatedCollection = new Dictionary<string, object>
-         {
-            { "Name", collection.collection_name },  // Обновляем имя коллекции
-            { "UpdatedAt", FieldValue.ServerTimestamp }  // Добавляем отметку времени обновления
-         };
+            {
+                { "Name", collection.collection_name },  // Обновляем имя коллекции
+                { "UpdatedAt", FieldValue.ServerTimestamp }  // Добавляем отметку времени обновления
+            };
          await collectionRef.UpdateAsync(updatedCollection);
 
          Debug.Log($"Коллекция {collection.collection_name} обновлена.");

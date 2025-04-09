@@ -53,6 +53,7 @@ public class Main : MonoBehaviour
     public void OpenEditCollection(Collection collection)
     {
         this.collection = collection;
+        
         openPrefab("EditCollection", false);
     }
 
