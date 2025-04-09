@@ -2,10 +2,12 @@ using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EditCollection : Page
 {
     public TMP_InputField Name;
+    public TextMeshProUGUI NameText;
     private Collection collectionToEdit;
     //public TextMeshProUGUI Notification;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,11 +15,14 @@ public class EditCollection : Page
     {
         buttonBackActive = true;
         labelActive = true;
-        labelText = "��� ���������";
+        labelText = "Мои коллекции";
         footerActive=true;
+        collectionToEdit = Main.main.collection;
+        NameText.text = Main.main.collection.collection_name;
     }
     public void Init(Collection collection)
     {
+        Debug.Log(collection.collection_name);
         collectionToEdit = collection;
         Name.text = collection.collection_name;  // Устанавливаем текущее название коллекции в поле ввода
     }

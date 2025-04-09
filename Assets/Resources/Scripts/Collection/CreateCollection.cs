@@ -6,13 +6,14 @@ using UnityEngine;
 public class CreateCollection : Page
 {
     public TMP_InputField Name;
+
     //public TextMeshProUGUI Notification;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         buttonBackActive = true;
         labelActive = true;
-        labelText = "��� ���������";
+        labelText = "Мои коллекции";
         footerActive=true;
     }
     public void CreateCollectionButton()

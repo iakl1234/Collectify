@@ -13,8 +13,6 @@ public class CollectionEvent : MonoBehaviour
     {
         this.Name.text = newCollection.collection_name;
         Collection = newCollection;
-        
-
     }
 
     public void OnButtonClicked()
