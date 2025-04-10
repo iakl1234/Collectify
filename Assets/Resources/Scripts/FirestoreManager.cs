@@ -66,6 +66,36 @@ public class FirestoreManager : MonoBehaviour
             Debug.LogError($"Ошибка при обновлении коллекции: {e.Message}"); 
         }
     }
+    public async Task UpdateItem(Item item, string collectionId)
+{
+    try
+    {
+        DocumentReference itemRef = firestore
+            .Collection("Users")
+            .Document(Main.main.UserName)
+            .Collection("Collections")
+            .Document(collectionId)
+            .Collection("Items")
+            .Document(item.id);
+
+        Dictionary<string, object> updatedData = new Dictionary<string, object>
+        {
+            { "Name", item.item_name },
+            { "Year", item.item_year },
+            { "Production", item.item_production },
+            { "Description", item.item_description }
+        };
+
+        await itemRef.UpdateAsync(updatedData);
+
+        Debug.Log($"Предмет {item.item_name} успешно обновлён в коллекции {collectionId}");
+    }
+    catch (System.Exception e)
+    {
+        Debug.LogError($"Ошибка при обновлении предмета: {e.Message}");
+    }
+}
+
 
     public async Task AddNewItem(Item item, string collectionId)
     {
