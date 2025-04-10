@@ -17,7 +17,7 @@ public class ItemEvent : MonoBehaviour
     {
         Main.main.OpenItemInfo(Item);
     }
-    public void OnButton_editClicked()
+    public void OnButton_editItemClicked()
     {
         Main.main.OpenEditItem(Item);
     }
