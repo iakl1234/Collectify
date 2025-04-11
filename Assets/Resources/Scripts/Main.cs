@@ -61,6 +61,12 @@ public class Main : MonoBehaviour
     {
         openPrefab("CreateItem", false);
     }
+    public void OpenEditItem(Item item)
+    {
+        this.item = item;
+        
+        openPrefab("EditItem", false);
+    }
     public void OpenAllCollection()
     {
         openPrefab("AllCollection", true);
@@ -109,13 +115,13 @@ public class Main : MonoBehaviour
         openPrefab("ConfirmDeleteItem", false);
     }
 
-    // Метод для подтверждения удаления
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public void DeleteItemConfirm()
     {
         AsyncDeleteItem();
     }
 
-    // Асинхронное удаление
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public async Task AsyncDeleteItem()
     {
         await FirestoreManager.Instance.DeleteItemAsync(item);
