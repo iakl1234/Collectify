@@ -24,7 +24,10 @@ public class ItemInfo : Page
         footerActive = true;
         buttonDeleteActive = true;
 
-
+        Name.text = Main.main.item.item_name;
+        Year.text= Main.main.item.item_year;
+        Production.text = Main.main.item.item_production;
+        Description.text = Main.main.item.item_description;
         Main.main.Button_delete.GetComponent<Button>().onClick.RemoveAllListeners();
         Main.main.Button_delete.GetComponent<Button>().onClick.AddListener(Main.main.DeleteItem);
     }

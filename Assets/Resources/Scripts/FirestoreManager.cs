@@ -6,6 +6,7 @@ using Firebase.Auth;
 using Firebase.Extensions;
 using Firebase.Firestore;
 using Google.MiniJSON;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirestoreManager : MonoBehaviour
@@ -67,34 +68,34 @@ public class FirestoreManager : MonoBehaviour
         }
     }
     public async Task UpdateItem(Item item, string collectionId)
-{
-    try
     {
-        DocumentReference itemRef = firestore
-            .Collection("Users")
-            .Document(Main.main.UserName)
-            .Collection("Collections")
-            .Document(collectionId)
-            .Collection("Items")
-            .Document(item.id);
-
-        Dictionary<string, object> updatedData = new Dictionary<string, object>
+        try
         {
-            { "Name", item.item_name },
-            { "Year", item.item_year },
-            { "Production", item.item_production },
-            { "Description", item.item_description }
-        };
+            DocumentReference itemRef = firestore
+                .Collection("Users")
+                .Document(Main.main.UserName)
+                .Collection("Collections")
+                .Document(collectionId)
+                .Collection("Items")
+                .Document(item.id);
 
-        await itemRef.UpdateAsync(updatedData);
+            Dictionary<string, object> updatedData = new Dictionary<string, object>
+            {
+                { "Name", item.item_name },
+                { "Year", item.item_year },
+                { "Production", item.item_production },
+                { "Description", item.item_description }
+            };
 
-        Debug.Log($"Предмет {item.item_name} успешно обновлён в коллекции {collectionId}");
+            await itemRef.UpdateAsync(updatedData);
+
+            Debug.Log($"Предмет {item.item_name} успешно обновлён в коллекции {collectionId}");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Ошибка при обновлении предмета: {e.Message}");
+        }
     }
-    catch (System.Exception e)
-    {
-        Debug.LogError($"Ошибка при обновлении предмета: {e.Message}");
-    }
-}
 
 
     public async Task AddNewItem(Item item, string collectionId)
@@ -113,14 +114,14 @@ public class FirestoreManager : MonoBehaviour
 
             // ������� ����� �������� ��������
             Dictionary<string, object> newItem = new Dictionary<string, object>
-        {
-            { "Name", item.item_name },
-            { "Year", item.item_year },
-            { "Production", item.item_production },
-            { "Description", item.item_description },
-            { "CreatedAt", FieldValue.ServerTimestamp },
-            // �������� ������ ���� �������� �� �������������
-        };
+            {
+                { "Name", item.item_name },
+                { "Year", item.item_year },
+                { "Production", item.item_production },
+                { "Description", item.item_description },
+                { "CreatedAt", FieldValue.ServerTimestamp },
+                // �������� ������ ���� �������� �� �������������
+            };
 
             // ��������� ����� �������� � ������������ Items
             DocumentReference addedItemRef = await itemsRef.AddAsync(newItem);
@@ -176,7 +177,7 @@ public class FirestoreManager : MonoBehaviour
             List<Dictionary<string, object>> items = new List<Dictionary<string, object>>();
             foreach (DocumentSnapshot document in snapshot.Documents)
             {
-                Item newItem = new Item(document.GetValue<string>("Name"),document.Id);
+                Item newItem = new Item(document.GetValue<string>("Name"), document.GetValue<string>("Year"), document.GetValue<string>("Production"), document.GetValue<string>("Description"), document.Id);
                 Main.main.ItemList.Add(newItem);
             }
         }
@@ -247,7 +248,7 @@ public class FirestoreManager : MonoBehaviour
         }
     }
 
-    public void RegisterUser(string email, string password)
+    public void RegisterUser(string email, string password,string username,string login)
     {
 
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
@@ -269,9 +270,41 @@ public class FirestoreManager : MonoBehaviour
 
             // ������������ ������� ���������������
             FirebaseUser newUser = task.Result.User;
-            Debug.LogFormat("Firebase user created successfully: {0} ({1})", newUser.DisplayName, newUser.UserId);
-            Main.main.UserName = newUser.UserId;
-            Main.main.OpenAllCollection();
+
+
+            Dictionary<string, object> newUserDict = new Dictionary<string, object>
+            {
+                { "Email", email },
+                { "Id", newUser.UserId },
+                { "Login", login },
+                { "Password", password },
+                { "Username", username }// ��������� ����� �������
+            };
+            // Сохраняем данные в Firestore
+            DocumentReference userRef = firestore.Collection("Users").Document(newUser.UserId);
+            userRef.SetAsync(newUserDict).ContinueWithOnMainThread(setTask => {
+                if (setTask.IsFaulted)
+                {
+                    Debug.LogError("Error creating user document: " + setTask.Exception);
+                    return;
+                }
+
+                Debug.Log("User document created successfully in Firestore.");
+                Main.main.UserName = newUser.UserId;
+                // Если нужно, сохраняем данные локально в Main.main.user
+                Main.main.user = new User
+                {
+                    Email = email,
+                    Id = newUser.UserId,
+                    Login = login,
+                    Username = username,
+                    Password= password
+                };
+                Main.main.OpenAllCollection();
+            });
+            //Debug.LogFormat("Firebase user created successfully: {0} ({1})", newUser.DisplayName, newUser.UserId);
+            //Main.main.UserName = newUser.UserId;
+            //Main.main.OpenAllCollection();
         });
     }
     public void SignInUser(string email, string password)
@@ -286,19 +319,43 @@ public class FirestoreManager : MonoBehaviour
             {
                 try
                 {
-                    RegisterUser(email, password);
+                    //RegisterUser(email, password);
                 }
                 catch { Debug.Log("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception); }
                 
                 return;
             }
 
-            // ������������ ������� ����� � �������
             FirebaseUser user = task.Result.User;
+            
             Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
             Main.main.UserName = user.UserId;
-            Main.main.OpenAllCollection();
-            
+            // Получение данных пользователя из Firestore
+            DocumentReference userDocRef = firestore.Collection("Users").Document(user.UserId);
+            userDocRef.GetSnapshotAsync().ContinueWithOnMainThread(task => {
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("Error getting user document: " + task.Exception);
+                    return;
+                }
+
+                DocumentSnapshot snapshot = task.Result;
+                if (snapshot.Exists)
+                {
+                    // Получаем все поля документа как словарь
+                    Main.main.user.Id = snapshot.Id;
+                    Main.main.user.Login = snapshot.GetValue<string>("Login");
+                    Main.main.user.Email = snapshot.GetValue<string>("Email");
+                    Main.main.user.Password = snapshot.GetValue<string>("Password");
+                    Main.main.user.Username = snapshot.GetValue<string>("Username");
+                    Main.main.OpenAllCollection();
+                }
+                else
+                {
+                    Debug.LogWarning("User document does not exist in Firestore.");
+                }
+            });
+
         });
     }
 

@@ -29,5 +29,10 @@ public class ProfileAutentification : Page
             //Main.main.OpenEntrance();
         }
     }
+    public void OpenRegistration()
+    {
+
+        Main.main.OpenRegistration();
+    }
 
 }

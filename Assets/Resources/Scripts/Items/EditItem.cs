@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class EditItem : Page
 {
@@ -17,6 +18,12 @@ public class EditItem : Page
         labelActive = true;
         labelText = "Редактировать предмет";
         footerActive = true;
+        itemToEdit = Main.main.item;
+
+        Name.text = Main.main.item.item_name;
+        Year.text = Main.main.item.item_year;
+        Production.text = Main.main.item.item_production;
+        Description.text = Main.main.item.item_description;
     }
 
     public void Init(Item item)
@@ -38,8 +45,9 @@ public class EditItem : Page
     {
         Debug.Log("Редактирование предмета...");
 
-        if (!string.IsNullOrEmpty(Name.text))
+        if (Name.text!="" && Year.text!=""&& Production.text!=""&& Description.text!="")
         {
+
             itemToEdit.item_name = Name.text;
             itemToEdit.item_year = Year.text;
             itemToEdit.item_production = Production.text;

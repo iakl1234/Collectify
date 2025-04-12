@@ -17,6 +17,14 @@ public class Item
     {
         this.item_name = name;
     }
+    public Item(string name, string year, string production, string description, string id)
+    {
+        this.item_name = name;
+        this.item_year = year;
+        this.item_production = production;
+        this.item_description = description;
+        this.id = id;
+    }
     public Item(string name, string year, string production, string description)
     {
         this.item_name = name;

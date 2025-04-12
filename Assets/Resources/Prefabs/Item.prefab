@@ -163,10 +163,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2166156422381529320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -64.369, y: 14.615}
-  m_SizeDelta: {x: 77.126, y: 88.033}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.8449936, y: 2.2003994}
+  m_SizeDelta: {x: 4.669998, y: 4.8600006}
   m_Pivot: {x: 0.1, y: 0.5}
 --- !u!222 &6966869256514543238
 CanvasRenderer:
@@ -252,7 +252,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2826958006784201441}
         m_TargetAssemblyTypeName: ItemEvent, Assembly-CSharp
-        m_MethodName: OnButton_editClicked
+        m_MethodName: OnButton_editItemClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
