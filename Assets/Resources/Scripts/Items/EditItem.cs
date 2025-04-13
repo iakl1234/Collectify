@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class EditItem : Page
 {
