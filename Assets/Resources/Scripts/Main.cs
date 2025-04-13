@@ -9,6 +9,7 @@ public class Main : MonoBehaviour
 {
     public static Main main;
     public GameObject Main_container;
+    public GameObject Attention_container;
     public GameObject Prefab;
     public TextMeshProUGUI Label;
     public GameObject Button_back;
@@ -44,65 +45,58 @@ public class Main : MonoBehaviour
     }
     public void OpenProfileAutentification()
     {
-        openPrefab("ProfileAutentification", true);
+        openPrefab("ProfileAutentification", true, Main_container);
     }
     public void OpenRegistration()
     {
-        openPrefab("ProfileRegistration", true);
+        openPrefab("ProfileRegistration", true, Main_container);
     }
     public void OpenCreateColletion()
     {
-        openPrefab("CreateCollection", false);
+        openPrefab("CreateCollection", false, Main_container);
     }
     public void OpenEditCollection(Collection collection)
     {
         this.collection = collection;
         
-        openPrefab("EditCollection", false);
+        openPrefab("EditCollection", false, Main_container);
     }
 
     public void OpenCreateItem()
     {
-        openPrefab("CreateItem", false);
+        openPrefab("CreateItem", false, Main_container);
     }
     public void OpenEditItem(Item item)
     {
         this.item = item;
         
-        openPrefab("EditItem", false);
+        openPrefab("EditItem", false, Main_container);
     }
     public void OpenAllCollection()
     {
-        openPrefab("AllCollection", true);
+        openPrefab("AllCollection", true, Main_container);
     }
     public void OpenAllItems(Collection collection)
     {
         this.collection = collection;
-        openPrefab("AllItems",false);
+        openPrefab("AllItems",false, Main_container);
         
     }
 
     public void OpenItemInfo(Item item)
     {
         this.item = item;
-        openPrefab("ItemInfo", false);
+        openPrefab("ItemInfo", false, Main_container);
     }
 
 
     public void DeleteWindow()
     {
-        openPrefab("ConfirmDelete", true);
+        openPrefab("ConfirmDelete", true, Attention_container);
     }
-
-    //public void OpenEntrance()
-    //{
-    //    if (user.authorized) openPrefab("Profile", true);  else openPrefab("Entrance", true);
-
-    //}
-    // Main.cs
     public void DeleteCollection()
     {
-        openPrefab("ConfirmDelete", false);
+        openPrefab("ConfirmDelete", false, Attention_container);
     }
 
     public void DeleteCollectionConfirm()
@@ -117,7 +111,7 @@ public class Main : MonoBehaviour
     }
     public void DeleteItem()
     {
-        openPrefab("ConfirmDeleteItem", false);
+        openPrefab("ConfirmDeleteItem", false, Attention_container);
     }
 
     // ����� ��� ������������� ��������
@@ -179,11 +173,11 @@ public class Main : MonoBehaviour
     {
         foreach (GameObject container in prefabQueue) Destroy(container);
     }
-    private void openPrefab(string prefabName,bool close)
+    private void openPrefab(string prefabName,bool close,GameObject container)
     {
         if (close) deleteAllContainers(); else try { prefabQueue.Peek().gameObject.SetActive(false); } catch { };
-        Prefab = Instantiate(Resources.Load<GameObject>("Prefabs/" + prefabName), Main_container.transform.position, Quaternion.identity);
-        Prefab.transform.SetParent(Main_container.transform, false);
+        Prefab = Instantiate(Resources.Load<GameObject>("Prefabs/" + prefabName), container.transform.position, Quaternion.identity);
+        Prefab.transform.SetParent(container.transform, false);
         prefabQueue.Push(Prefab);
         Prefab.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,0);
     }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\firestoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|c:\\users\\artem\\desktop\\collectify\\collectify\\assets\\resources\\scripts\\firestoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\firestoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|c:\\users\\artem\\desktop\\collectify\\collectify\\assets\\resources\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\profileregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\profileregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|c:\\users\\artem\\desktop\\collectify\\collectify\\assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\collection\\editcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\User.cs",
@@ -78,18 +78,17 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:14:20.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T21:14:20.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FirestoreManager.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAowBUBAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABABAAAAAAAAAIBZwBUBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T06:18:41.277Z",
               "EditorCaption": ""
@@ -104,12 +103,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\Item.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:21:59.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:21:59.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProfileRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
@@ -117,18 +115,17 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:01:09.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T21:01:09.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Main.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Main.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwBgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAA3wF8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T18:21:25.179Z",
               "EditorCaption": ""
@@ -155,8 +152,7 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:36:31.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T13:36:31.63Z"
             },
             {
               "$type": "Document",
