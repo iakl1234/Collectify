@@ -22,7 +22,7 @@ public class Main : MonoBehaviour
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
     //public User user=new User();
     public FirestoreManager firestoreManager;
-
+    public User user=new User();
     public string UserName;
 
 
@@ -34,7 +34,7 @@ public class Main : MonoBehaviour
         CollectionsList=new List<Collection>();
         ItemList = new List<Item>();
         firestoreManager = new FirestoreManager();
-
+        
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,7 +44,11 @@ public class Main : MonoBehaviour
     }
     public void OpenProfileAutentification()
     {
-        openPrefab("ProfileAutentification", false);
+        openPrefab("ProfileAutentification", true);
+    }
+    public void OpenRegistration()
+    {
+        openPrefab("ProfileRegistration", true);
     }
     public void OpenCreateColletion()
     {
@@ -60,6 +64,12 @@ public class Main : MonoBehaviour
     public void OpenCreateItem()
     {
         openPrefab("CreateItem", false);
+    }
+    public void OpenEditItem(Item item)
+    {
+        this.item = item;
+        
+        openPrefab("EditItem", false);
     }
     public void OpenAllCollection()
     {
@@ -77,6 +87,7 @@ public class Main : MonoBehaviour
         this.item = item;
         openPrefab("ItemInfo", false);
     }
+
 
     public void DeleteWindow()
     {
@@ -109,13 +120,13 @@ public class Main : MonoBehaviour
         openPrefab("ConfirmDeleteItem", false);
     }
 
-    // Метод для подтверждения удаления
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public void DeleteItemConfirm()
     {
         AsyncDeleteItem();
     }
 
-    // Асинхронное удаление
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public async Task AsyncDeleteItem()
     {
         await FirestoreManager.Instance.DeleteItemAsync(item);
