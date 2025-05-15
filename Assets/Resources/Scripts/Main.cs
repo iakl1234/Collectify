@@ -88,6 +88,10 @@ public class Main : MonoBehaviour
         this.item = item;
         openPrefab("ItemInfo", false, Main_container);
     }
+    public void OpenProfile()
+    {
+        openPrefab("Profile", true, Main_container);
+    }
 
 
     public void DeleteWindow()

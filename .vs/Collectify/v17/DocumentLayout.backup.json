@@ -1,62 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\",
+  "WorkspaceRootPath": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|c:\\users\\artem\\desktop\\collectify\\collectify\\assets\\resources\\scripts\\firestoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\firestoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Profile\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Downloads\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\profileregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\profileregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Collection\\Collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\collection\\editcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\collection\\editcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\items\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\items\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Items\\ItemInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\profileautentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\profileautentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Items\\CreateItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\items\\edititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\items\\edititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Items\\EditItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\items\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\items\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Collection\\EditCollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\items\\createitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\items\\createitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\ProfileAutentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\items\\iteminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\items\\iteminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\ProfileRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Items\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\collection\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\collection\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\FirestoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\assets\\resources\\scripts\\collection\\collectionevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0752C70-D7B0-2E8B-D5F1-CDE8D57EBF09}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\collection\\collectionevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Items\\ItemEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,15 +73,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Downloads\\Profile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Profile.cs",
+              "ToolTip": "C:\\Users\\Honami\\Downloads\\Profile.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T06:21:55.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T06:15:05.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\User.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -82,24 +118,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "FirestoreManager.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
-              "ViewState": "AgIAABABAAAAAAAAAIBZwBUBAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAAAABUBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:18:41.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T06:18:41.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\Item.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\Item.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,11 +142,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "ProfileRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,22 +156,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Main.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Main.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAA3wF8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAcwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T18:21:25.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ProfileAutentification.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ProfileAutentification.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\ProfileAutentification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -144,11 +179,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "EditCollection.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -158,21 +193,21 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "EditItem.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\EditItem.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\EditItem.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowBkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowBkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T13:36:04.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "CreateItem.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -180,11 +215,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "ItemInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -192,11 +227,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Page.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Page.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Page.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Page.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Page.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Page.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Page.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -204,11 +239,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "Collection.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\Collection.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\Collection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -216,11 +251,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "ItemEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -228,11 +263,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CollectionEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Collectify\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

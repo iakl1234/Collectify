@@ -3,6 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Profile\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Downloads\\Profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Collection\\Collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +40,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\ProfileAutentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +73,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +81,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Downloads\\Profile.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Profile.cs",
+              "ToolTip": "C:\\Users\\Honami\\Downloads\\Profile.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T06:21:55.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Profile\\Profile.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T06:15:05.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\User.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\User.cs",
@@ -82,12 +113,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:14:20.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T21:14:20.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "FirestoreManager.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
@@ -95,12 +125,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\FirestoreManager.cs",
               "ViewState": "AgIAABYBAAAAAAAAAAAAABUBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:18:41.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T06:18:41.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\Item.cs",
@@ -108,12 +137,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\Item.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:21:59.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:21:59.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ProfileRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
@@ -121,25 +149,24 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\ProfileRegistration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:01:09.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T21:01:09.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Main.cs",
               "ToolTip": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Main.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwFYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T18:21:25.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ProfileAutentification.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\ProfileAutentification.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\ProfileAutentification.cs",
@@ -147,12 +174,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\ProfileAutentification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:39:16.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T08:39:16.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "EditCollection.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
@@ -160,12 +186,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\EditCollection.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:36:31.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T13:36:31.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EditItem.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\EditItem.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\EditItem.cs",
@@ -173,12 +198,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\EditItem.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAowBkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:36:04.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T13:36:04.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CreateItem.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
@@ -186,12 +210,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\CreateItem.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:47:57.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T17:47:57.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ItemInfo.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
@@ -199,12 +222,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Items\\ItemInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:27:33.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T17:27:33.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Page.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Page.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Page.cs",
@@ -212,12 +234,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Page.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:24:04.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T20:24:04.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Collection.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\Collection.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\Collection.cs",
@@ -225,12 +246,11 @@
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Collection\\Collection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:29:41.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T16:29:41.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ItemEvent.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Items\\ItemEvent.cs",
@@ -242,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CollectionEvent.cs",
               "DocumentMoniker": "C:\\Users\\Honami\\Documents\\GitHub\\Collectify\\Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Collection\\CollectionEvent.cs",
