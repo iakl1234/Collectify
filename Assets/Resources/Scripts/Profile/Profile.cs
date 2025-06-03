@@ -20,6 +20,18 @@ public class Profile : Page
         UserName.text = user.Username;
         Email.text = user.Email;
     }
+    public void Profileedit()
+    {
+        Main.main.OpenProfileedit();
+    }
+    public void Profilequit()
+    {
+        Main.main.OpenProfilequit();
+    }
+    public void Profilequit1()
+    {
+        Main.main.OpenProfilequit1();
+    }
 
 
 

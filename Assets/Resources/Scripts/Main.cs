@@ -23,7 +23,7 @@ public class Main : MonoBehaviour
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
     //public User user=new User();
     public FirestoreManager firestoreManager;
-    public User user=new User();
+    public User user = new User();
     public string UserName;
 
 
@@ -32,19 +32,23 @@ public class Main : MonoBehaviour
     void Awake()
     {
         main = this;
-        CollectionsList=new List<Collection>();
+        CollectionsList = new List<Collection>();
         ItemList = new List<Item>();
         firestoreManager = new FirestoreManager();
-        
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Принудительная инициализация UI
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(Main_container.GetComponent<RectTransform>());
+
         OpenProfileAutentification();
-        //OpenAllCollection();
     }
     public void OpenProfileAutentification()
     {
+        // Всегда очищаем стек при открытии авторизации
         openPrefab("ProfileAutentification", true, Main_container);
     }
     public void OpenRegistration()
@@ -58,7 +62,7 @@ public class Main : MonoBehaviour
     public void OpenEditCollection(Collection collection)
     {
         this.collection = collection;
-        
+
         openPrefab("EditCollection", false, Main_container);
     }
 
@@ -69,7 +73,7 @@ public class Main : MonoBehaviour
     public void OpenEditItem(Item item)
     {
         this.item = item;
-        
+
         openPrefab("EditItem", false, Main_container);
     }
     public void OpenAllCollection()
@@ -79,8 +83,8 @@ public class Main : MonoBehaviour
     public void OpenAllItems(Collection collection)
     {
         this.collection = collection;
-        openPrefab("AllItems",false, Main_container);
-        
+        openPrefab("AllItems", false, Main_container);
+
     }
 
     public void OpenItemInfo(Item item)
@@ -91,6 +95,19 @@ public class Main : MonoBehaviour
     public void OpenProfile()
     {
         openPrefab("Profile", true, Main_container);
+    }
+    public void OpenProfileedit()
+    {
+        openPrefab("Profileedit", true, Main_container);
+    }
+    public void OpenProfilequit()
+    {
+        openPrefab("Profilequit", true, Main_container);
+    }
+    public void OpenProfilequit1()
+    {
+        // Выход - очищаем весь стек и открываем авторизацию
+        OpenProfileAutentification();
     }
 
 
@@ -133,10 +150,10 @@ public class Main : MonoBehaviour
 
 
 
-    public void StartSetting(bool activeBack, bool activeLabel,string labelText="", bool activeFooter=true, bool activeDelete=false)
+    public void StartSetting(bool activeBack, bool activeLabel, string labelText = "", bool activeFooter = true, bool activeDelete = false)
     {
         Button_back.SetActive(activeBack);
-        Label.enabled=activeLabel;
+        Label.enabled = activeLabel;
         if (activeLabel)
         {
             Label.text = labelText;
@@ -164,26 +181,119 @@ public class Main : MonoBehaviour
     {
         Label.text = name;
     }
+    // Main.cs
+
     public void Back()
     {
-        deleteLastContainers();
+        try
+        {
+            if (prefabQueue.Count > 1) // Не позволяем удалить последний элемент
+            {
+                deleteLastContainers();
+            }
+            else
+            {
+                Debug.LogWarning("Can't go back - only one screen in stack");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Back error: {e.Message}");
+        }
     }
+
     private void deleteLastContainers()
     {
-        Destroy(prefabQueue.Pop());
-        prefabQueue.Peek().gameObject.SetActive(true);
+        if (prefabQueue.Count == 0)
+        {
+            Debug.LogWarning("Stack is empty - nothing to delete");
+            return;
+        }
+
+        // Удаляем текущий активный префаб
+        GameObject top = prefabQueue.Pop();
+        if (top != null) Destroy(top);
+
+        // Активируем предыдущий префаб
+        if (prefabQueue.Count > 0)
+        {
+            GameObject previous = prefabQueue.Peek();
+            previous.SetActive(true);
+            Debug.Log($"Activated previous screen: {previous.name}");
+        }
     }
+
     private void deleteAllContainers()
     {
-        foreach (GameObject container in prefabQueue) Destroy(container);
+        Debug.Log($"Clearing all containers ({prefabQueue.Count} items)");
+
+        while (prefabQueue.Count > 0)
+        {
+            GameObject obj = prefabQueue.Pop();
+            if (obj != null)
+            {
+                Debug.Log($"Destroying: {obj.name}");
+                Destroy(obj);
+            }
+        }
     }
-    private void openPrefab(string prefabName,bool close,GameObject container)
+
+    private void openPrefab(string prefabName, bool close, GameObject container)
     {
-        if (close) deleteAllContainers(); else try { prefabQueue.Peek().gameObject.SetActive(false); } catch { };
-        Prefab = Instantiate(Resources.Load<GameObject>("Prefabs/" + prefabName), container.transform.position, Quaternion.identity);
-        Prefab.transform.SetParent(container.transform, false);
-        prefabQueue.Push(Prefab);
-        Prefab.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,0);
+        Debug.Log($"Opening: {prefabName}, close: {close}, container: {container.name}");
+
+        try
+        {
+            // Очистка предыдущих префабов
+            if (close)
+            {
+                deleteAllContainers();
+            }
+            else if (prefabQueue.Count > 0)
+            {
+                GameObject top = prefabQueue.Peek();
+                if (top != null) top.SetActive(false);
+            }
+
+            // Загрузка префаба
+            string path = "Prefabs/" + prefabName;
+            GameObject prefabObj = Resources.Load<GameObject>(path);
+
+            if (prefabObj == null)
+            {
+                Debug.LogError($"Prefab not found: {path}");
+                return;
+            }
+
+            // Создание экземпляра
+            Prefab = Instantiate(prefabObj, container.transform);
+            prefabQueue.Push(Prefab);
+
+            // КРИТИЧЕСКИ ВАЖНЫЕ НАСТРОЙКИ ДЛЯ ОТОБРАЖЕНИЯ
+            RectTransform rt = Prefab.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                // Настройка для полного растяжения
+                rt.anchorMin = Vector2.zero;
+                rt.anchorMax = Vector2.one;
+                rt.offsetMin = Vector2.zero;
+                rt.offsetMax = Vector2.zero;
+                rt.pivot = new Vector2(0.5f, 0.5f);
+                rt.localScale = Vector3.one;
+
+                Debug.Log("RectTransform set to full stretch");
+            }
+
+            // Принудительное обновление UI
+            LayoutRebuilder.ForceRebuildLayoutImmediate(container.GetComponent<RectTransform>());
+            Canvas.ForceUpdateCanvases();
+
+            Debug.Log($"Successfully opened: {prefabName}");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Error opening prefab: {e.Message}");
+        }
     }
 
 }
