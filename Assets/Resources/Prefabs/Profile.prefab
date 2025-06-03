@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 969008540515290167}
   - component: {fileID: 1987448344881105206}
   - component: {fileID: 5363161984555630970}
+  - component: {fileID: 4459678380693249014}
   m_Layer: 5
   m_Name: Profile
   m_TagString: Untagged
@@ -802,6 +803,21 @@ MonoBehaviour:
   Name: {fileID: 469204438462133548}
   UserName: {fileID: 8064400809337433822}
   Email: {fileID: 4412122391576913416}
+--- !u!114 &4459678380693249014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213958943539274161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5641bf7d8b0b9140863a5c26398d98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 469204438462133548}
+  usernameText: {fileID: 8064400809337433822}
+  emailText: {fileID: 4412122391576913416}
 --- !u!1 &2256505034342360674
 GameObject:
   m_ObjectHideFlags: 0

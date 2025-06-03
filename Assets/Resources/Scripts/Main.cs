@@ -4,6 +4,14 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+// Добавляем класс UserData для хранения данных профиля
+[System.Serializable]
+public class UserData
+{
+    public string Name = "Guest";
+    public string Username = "Guest";
+    public string Email = "1@mail.ru";
+}
 
 public class Main : MonoBehaviour
 {
@@ -18,17 +26,17 @@ public class Main : MonoBehaviour
     public Button Button_delete;
     public Collection collection;
     public Item item;
-    //public GameObject Button_new_container;
-    //public Button Button_new;
     private Stack<GameObject> prefabQueue = new Stack<GameObject>();
-    //public User user=new User();
     public FirestoreManager firestoreManager;
     public User user = new User();
     public string UserName;
 
+    // Добавляем поле для данных пользователя
+    public UserData userData = new UserData();
 
     public List<Collection> CollectionsList;
     public List<Item> ItemList;
+
     void Awake()
     {
         main = this;
@@ -36,9 +44,18 @@ public class Main : MonoBehaviour
         ItemList = new List<Item>();
         firestoreManager = new FirestoreManager();
 
+        // Инициализируем данные пользователя (можно изменить)
+        userData = new UserData()
+        {
+            Name = "user",
+            Username = "user",
+            Email = "user@mail.ru​"
+        };
     }
+
+    // ... остальной код без изменений ...
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+void Start()
     {
         // Принудительная инициализация UI
         Canvas.ForceUpdateCanvases();
